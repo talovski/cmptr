@@ -1,116 +1,105 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+/* eslint-disable react/no-unescaped-entities */
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import { useState } from "react";
+import clsx from "clsx";
 
 export default function Home() {
+  const [hover, setHover] = useState<
+    "none" | "ace" | "haven" | "hse" | "books"
+  >("none");
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main
+      className={clsx({
+        "min-h-screen rounded-md": true,
+        "bg-[#F8F8F9]": hover === "none",
+        "bg-[#212131] text-[#F9DE78]": hover === "ace",
+        "bg-[#0E2A6C] text-[#EDEDED]": hover === "hse",
+        "color-[#713DA9] bg-[#FCEDC1]": hover === "haven",
+        "bg-[#F5EDDF]": hover === "books",
+      })}
+    >
+      <div className="relative ml-24 h-full w-3/4 max-w-[1280px] pt-24">
+        <div className="max-w-[1050px] pb-12">
+          <h1 className="text-4xl">
+            <span className="font-bold">Nika Talovski</span>, Full Stack
+            Developer with strong affinity towards UX design.
+          </h1>
+          <p className="pt-5 text-4xl">
+            I'm available for full-time or contract work in May 2023.
+            <a
+              href="mailto:talovskx@icloud.com"
+              className="font-bold no-underline hover:underline"
+            >
+              Reach out
+            </a>
+            , if you'd like to work together.
+          </p>
+        </div>
+        <div className="flex flex-wrap">
+          <div className="w-1/2 min-w-[292px] md:w-11/12">
+            <p className="pt-12 text-2xl italic">Selected work</p>
+            <div className="flex flex-col gap-4 pt-1">
+              <div
+                onMouseEnter={() => setHover("ace")}
+                onMouseLeave={() => setHover("none")}
+                className="relative -left-6 max-w-[700px] cursor-alias px-6 py-4 hover:shadow-1px hover:shadow-[#F9DE78]"
+              >
+                <p className="text-2xl">
+                  <span className="font-bold">Frontend Engineer</span>,{" "}
+                  <a href="https://www.getace.io">Ace</a>, AI-copilot for
+                  engineering managers.
+                </p>
+              </div>
+              <div
+                onMouseEnter={() => setHover("haven")}
+                onMouseLeave={() => setHover("none")}
+                className="relative -left-6 -top-6 max-w-[700px] cursor-alias px-6 py-4 hover:shadow-1px hover:shadow-[#713DA9]"
+              >
+                <p className="text-2xl">
+                  <span className="font-bold">
+                    Full Stack Developer, Designer
+                  </span>
+                  , <a href="https://www.getace.io">DM Haven</a>, a place to
+                  play Dungeons and Dragons.
+                </p>
+              </div>
+              <div
+                onMouseEnter={() => setHover("books")}
+                onMouseLeave={() => setHover("none")}
+                className="relative -left-6 -top-12 max-w-[700px] cursor-alias px-6 py-4 hover:shadow-1px hover:shadow-[#713DA9]"
+              >
+                <p className="text-2xl">
+                  <span className="font-bold">Books</span>, I like the idea of
+                  having read, books I've read and where I read them.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/2 min-w-[292px] md:w-11/12">
+            <p className="pt-12 text-2xl italic">About me</p>
+            <div className="flex flex-col gap-6 pt-3">
+              <p className="text-2xl">
+                Most recently, I was a Frontend Engineer at Ace. I was focused
+                on business logic and UI development in a small team of 3
+                engineers.
+              </p>
+              <p className="text-2xl">
+                Before that, I spent some time doing freelance jobs, mainly
+                working with small businesses and design studios in Russia and
+                Europe. I also worked in academia, focuing on application of
+                statistics to social sciences.
+              </p>
+              <p className="text-2xl">
+                In 2023 I made Aliyah to Israel and now live in Tel Aviv. I also
+                love pottery and role-playing games.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      Nika Talovski
     </main>
-  )
+  );
 }
