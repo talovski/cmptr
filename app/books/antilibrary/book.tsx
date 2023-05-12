@@ -7,7 +7,7 @@ type Book = {
 };
 export default function Book({ book }: { book: Book }) {
   return (
-    <div className="w-[280px]">
+    <div className="w-[260px]">
       <Image
         src={book.cover}
         alt={book.title}
@@ -15,8 +15,8 @@ export default function Book({ book }: { book: Book }) {
         height={320}
         className="rounded-md"
       />
-      <p className="pt-4 text-xl">{book.title}</p>
-      <p className="text-xl italic">{book.authors}</p>
+      <p className="text-medium pt-4">{book.title}</p>
+      <p className="text-medium italic">{book.authors}</p>
     </div>
   );
 }

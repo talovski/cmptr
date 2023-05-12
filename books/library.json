@@ -1,0 +1,20 @@
+[
+  {
+    "id": "empire",
+    "cover": "/covers/art of doing science.jpg",
+    "title": "Империя должна умереть",
+    "photo": "/photos/empire.png",
+    "authors": "Михаил Зыгарь",
+    "notes": "My impressions.",
+    "date": "2022"
+  },
+  {
+    "id": "summer",
+    "cover": "/covers/art of doing science.jpg",
+    "photo": "/photos/summer.png",
+    "title": "Лето целого века",
+    "authors": "Флориан Иллиес",
+    "notes": "My impressions.",
+    "date": "2022"
+  }
+]
