@@ -41,9 +41,6 @@ export default function RootLayout({
           <Link className="no-underline hover:underline" href="/">
             About
           </Link>
-          {/*          <Link className="no-underline hover:underline" href="/projects">
-            Projects
-          </Link>*/}
           <Link
             className="no-underline hover:underline"
             href="/books/antilibrary"
@@ -53,14 +50,6 @@ export default function RootLayout({
         </div>{" "}
         <div className="relative mx-auto my-0 rounded-md bg-[#F8F8F9] transition duration-300 ease-out">
           {children}
-          <div
-            className={clsx(
-              "m-auto flex justify-center pb-6 pt-24",
-              golos.className
-            )}
-          >
-            made by moi in tel aviv
-          </div>
         </div>
       </body>
     </html>

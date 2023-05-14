@@ -140,6 +140,14 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div
+          className={clsx(
+            "m-auto flex justify-center pb-6 pt-24",
+            golos.className
+          )}
+        >
+          made by moi in tel aviv
+        </div>
       </div>
     </main>
   );
