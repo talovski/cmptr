@@ -22,7 +22,6 @@ export default function BookImpression({
   index: number;
 }) {
   const posY = Math.floor(Math.random() * 100) + 1 + "%";
-
   return (
     <>
       <div className="relative block md:hidden">

@@ -34,7 +34,7 @@ export default function Book({ book }: { book: Book }) {
                 height={25}
               />
             </Tooltip.Trigger>
-            <Tooltip.Content className="rounded-lg bg-gray-900 p-2 font-sans text-sm text-white shadow-sm duration-300">
+            <Tooltip.Content className="rounded-lg bg-gray-900 p-2 font-sans text-sm tracking-normal text-white shadow-sm duration-300">
               <Tooltip.Arrow />
               {book.notes}
             </Tooltip.Content>
