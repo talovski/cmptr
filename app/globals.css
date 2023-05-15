@@ -1,72 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/** {
-	all: "unset";
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-smooth: antialiased;
-	line-height: 1;
+/* 
+:root {
+  --accent: #b7755f;
+  --bg: #f8f8f9;
+  --fg: #33334b;
+}
+* {
+  all: unset;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-smooth: antialiased;
+  line-height: 1;
 }
 
 html,
 body {
-	text-rendering: optimizeLegibility;
-}*/
-
-.text-largest {
-	font-size: 59px;
-	letter-spacing: -0.055em;
-	text-indent: -0.025em;
-}
-
+  text-rendering: optimizeLegibility;
+  background: var(--bg);
+  color: var(--fg);
+} */
+/* 
 .text-xl {
-	font-size: 45px;
-	letter-spacing: -0.0435em;
-	text-indent: -0.023em;
-	line-height: 1.2;
+  font-size: 45px;
+  letter-spacing: -0.0435em;
+  text-indent: -0.023em;
+  line-height: 1.2;
+  font-weight: bold;
 }
 
 .text-larger {
-	font-size: 32px;
-	letter-spacing: -0.03em;
-	text-indent: -0.019em;
-	line-height: 1.2;
+  font-size: 32px;
+  letter-spacing: -0.03em;
+  text-indent: -0.019em;
+  line-height: 1.2;
 }
 
 .text-large {
-	font-size: 28px;
-	letter-spacing: -0.025em;
-	text-indent: -0.018em;
-	line-height: 1.2;
+  font-size: 28px;
+  letter-spacing: -0.025em;
+  text-indent: -0.018em;
+  line-height: 1.2;
 }
 
 .text-medium {
-	font-size: 19px;
-	letter-spacing: -0.016em;
-	line-height: 1.2;
+  font-size: 19px;
+  letter-spacing: -0.016em;
+  line-height: 1.2;
 }
 
 @media only screen and (max-width: 750px) {
-	.text-xl {
-		font-size: 32px;
-		letter-spacing: -0.03em;
-		text-indent: -0.019em;
-		line-height: 1.2;
-	}
+  .text-xl {
+    font-size: 32px;
+    letter-spacing: -0.03em;
+    text-indent: -0.019em;
+    line-height: 1.2;
+  }
 
-	.text-larger {
-		font-size: 28px;
-		letter-spacing: -0.025em;
-		text-indent: -0.018em;
-		line-height: 1.2;
-	}
+  .text-larger {
+    font-size: 28px;
+    letter-spacing: -0.025em;
+    text-indent: -0.018em;
+    line-height: 1.2;
+  }
 
-	.text-large {
-		font-size: 21px;
-		letter-spacing: -0.016em;
-		line-height: 1.2;
-	}
-}
+  .text-large {
+    font-size: 21px;
+    letter-spacing: -0.016em;
+    line-height: 1.2;
+  }
+} */

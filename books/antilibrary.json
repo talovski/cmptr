@@ -3,31 +3,36 @@
     "id": "art-of-doing-science",
     "cover": "/covers/art of doing science.jpg",
     "title": "The Art of Doing Science and Engineering: Learning to Learn",
-    "authors": "Richard W. Hamming"
+    "authors": "Richard W. Hamming",
+    "notes": "Was suggested on Hacker News"
   },
   {
     "id": "digital-minimalism",
     "cover": "/covers/digital minimalism.jpg",
     "title": "Digital Minimalism: Choosing a Focused Life in a Noisy World",
-    "authors": "Cal Newport"
+    "authors": "Cal Newport",
+    "notes": "Found out on Reddit"
   },
   {
     "id": "new-dark-age",
     "cover": "/covers/new dark age.jpg",
     "title": "New Dark Age: Technology and the End of the Future",
-    "authors": "James Bridle"
+    "authors": "James Bridle",
+    "notes": "Found out in Maggie Appleton's blog"
   },
   {
     "id": "secret-history",
     "cover": "/covers/secret history.jpg",
     "title": "The Secret History",
-    "authors": "Donna Tartt"
+    "authors": "Donna Tartt",
+    "notes": "The mother of Dark Academia, but unfortunately, not gay enough"
   },
 
   {
     "id": "caps-lock",
     "cover": "/covers/caps lock.jpg",
     "title": "CAPS LOCK: How Capitalism Took Hold of Graphic Design, and How to Escape from It",
-    "authors": "Ruben Pater"
+    "authors": "Ruben Pater",
+    "notes": "Found out on Are.na, in discussion about critial design and neo-liberalism"
   }
 ]

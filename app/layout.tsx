@@ -51,6 +51,9 @@ export default function RootLayout({
         <div className="relative mx-auto my-0 rounded-md bg-[#F8F8F9] transition duration-300 ease-out">
           {children}
         </div>
+        <div className={clsx("m-auto flex justify-center pt-1 text-white")}>
+          made by moi in tel aviv
+        </div>
       </body>
     </html>
   );

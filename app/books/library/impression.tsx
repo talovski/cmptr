@@ -1,21 +1,18 @@
 import clsx from "clsx";
-import { Golos_Text } from "next/font/google";
 import Image from "next/image";
 type Impression = {
   id: string;
   title: string;
+  link: string;
   cover: string;
   authors: string;
   photo: string;
-  notes: string;
+  notes: {
+    summary: string;
+    highlights: string[];
+  };
   date: string;
 };
-
-const golos = Golos_Text({
-  style: "normal",
-  weight: "400",
-  subsets: ["cyrillic", "latin"],
-});
 
 export default function BookImpression({
   impression,
@@ -25,51 +22,96 @@ export default function BookImpression({
   return (
     <>
       <div className="relative block md:hidden lg:hidden">
-        <div className="z-20 flex gap-4">
-          <Image
-            width={230}
-            height={100}
-            src={impression.photo}
-            alt="Photo"
-            className="rounded-md"
-          />
-          <Image
-            width={220}
-            height={100}
-            src={impression.cover}
-            alt={impression.title}
-            className="min-h-[60px] min-w-[160px] rounded-md"
-          />
+        <div className="relative z-20 flex gap-2">
+          {/*  h-[315px]  */}
+          <div className="">
+            <Image
+              width={270}
+              height={300}
+              src={impression.photo}
+              alt="Photo"
+              className=" rounded-md object-contain"
+            />
+          </div>
+          <div className="relative">
+            <Image
+              width={200}
+              height={200}
+              // fill={true}
+              src={impression.cover}
+              alt={impression.title}
+              className="min-h-[50px] min-w-[100px] rounded-md object-contain"
+            />
+          </div>
         </div>
-        <h3 className="text-larger pb-2 pt-8 md:pt-12">
-          {impression.title}, В Хайфе, Израиль
+        <h3 className="pb-2 pt-8 text-md md:pt-12">
+          <a
+            href={impression.link}
+            className="font-bold italic underline decoration-[#C2715A] underline-offset-4"
+          >
+            {impression.title}
+          </a>
+          , в Хайфе, Израиль
         </h3>
-        <p className={clsx(golos.className, "text-medium")}>
-          {impression.notes}
-        </p>
+        <p className={clsx("pt-2 text-sm")}>{impression.notes.summary}</p>
+        {!!impression.notes.highlights?.length && (
+          <>
+            <p className="pb-3 pt-4 text-xm">Highlighted</p>
+            <div className="flex flex-col gap-3">
+              {impression.notes.highlights.map((h) => (
+                <div key={h} className="flex gap-3">
+                  <p>{`>`}</p>
+                  <p className="text-xs" key={h}>
+                    {h}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
       </div>
-      <div className="w-full items-start sm:hidden md:flex md:gap-12 lg:flex lg:gap-24">
+      <div className="w-full items-start sm:hidden md:flex md:gap-12 lg:flex">
         <Image
-          width={300}
+          width={400}
           height={100}
           src={impression.photo}
           alt="Photo"
-          className="min-w-[300px] rounded-md lg:min-w-[380px]"
+          className="max-h-[590px] min-w-[300px] rounded-md object-contain lg:min-w-[380px]"
         />
         <div className="max-w-[400px]">
           <Image
-            width={250}
+            width={200}
             height={100}
             src={impression.cover}
             alt={impression.title}
             className="rounded-md"
           />
-          <h3 className={clsx("text-larger pb-2 pt-8")}>
-            {impression.title}, В Хайфе, Израиль
+
+          <h3 className={clsx("pb-2 pt-8 text-lg sm:text-md")}>
+            <a
+              href={impression.link}
+              className="font-bold italic underline decoration-[#C2715A] underline-offset-4"
+            >
+              {impression.title}
+            </a>
+            , in Tel Aviv in 2023
           </h3>
-          <p className={clsx(golos.className, "text-medium")}>
-            {impression.notes}
-          </p>
+          <p className={clsx("pt-2 text-sm")}>{impression.notes.summary}</p>
+          {!!impression.notes.highlights?.length && (
+            <>
+              <p className="pb-3 pt-4 text-xm">Highlighted</p>
+              <div className="flex flex-col gap-3">
+                {impression.notes.highlights.map((h) => (
+                  <div key={h} className="flex gap-3">
+                    <p>{`>`}</p>
+                    <p className="text-xs" key={h}>
+                      {h}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>

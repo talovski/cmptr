@@ -1,20 +1,46 @@
 [
   {
-    "id": "empire",
-    "cover": "/covers/art of doing science.jpg",
-    "title": "Империя должна умереть",
+    "id": "daily-rituals",
+    "cover": "/covers/daily-rituals.jpg",
     "photo": "/photos/empire.png",
-    "authors": "Михаил Зыгарь",
-    "notes": "My impressions.",
-    "date": "2022"
+    "title": "Daily Rituals: How Artists Work",
+    "link": "https://bookshop.org/p/books/daily-rituals-how-artists-work-mason-currey/8714942?ean=9780307273604",
+    "authors": "Mason Currey",
+    "notes": {
+      "summary": "This book made me think about the lack of structure in my life. Apparently, many famous artists had, actually, quite thought out routines. Also, many of them were creeps.",
+      "highlights": [
+        "On Auden: He was dismissive of night owls: “Only the ‘Hitlers of the world’ work at night; no honest artist does.",
+        "On Auden: To maintain his energy and concentration, the poet relied on amphetamines, taking a dose of Benzedrine each morning the way many people take a daily multivitamin. At night, he used Seconal or another sedative to get to sleep.",
+        "On de Beauvoir: It was an uncluttered kind of life, a simplicity deliberately constructed so that she could do her work.",
+        "On Wolfe: he had been unconsciously fondling his genitals, a habit from childhood that, while not exactly sexual (his “penis remained limp and unaroused,” he noted in a letter to his editor)"
+      ]
+    },
+    "date": "August 2023"
   },
   {
-    "id": "summer",
-    "cover": "/covers/art of doing science.jpg",
-    "photo": "/photos/summer.png",
-    "title": "Лето целого века",
-    "authors": "Флориан Иллиес",
-    "notes": "My impressions.",
-    "date": "2022"
+    "id": "gideon-the-ninth",
+    "cover": "/covers/gideon-the-ninth.jpg",
+    "photo": "/photos/empire.png",
+    "title": "Gideon the Ninth",
+    "link": "https://publishing.tor.com/gideontheninth-tamsynmuir/9781250313195/",
+    "authors": "Tasmyn Muir",
+    "notes": {
+      "summary": "Did I understand what was happening half of the time? No. Was I hooked? Well...",
+      "highlights": []
+    },
+    "date": "August 2023"
+  },
+  {
+    "id": "the-song-of-achilles",
+    "cover": "/covers/the-song-of-achilles.jpg",
+    "photo": "/photos/empire.png",
+    "title": "The Song of Achilles",
+    "link": "https://bookshop.org/p/books/the-song-of-achilles-madeline-miller/228865?ean=9780062060624",
+    "authors": "Madeline Miller",
+    "notes": {
+      "summary": "It was as beautiful as it was sad (very).",
+      "highlights": []
+    },
+    "date": "August 2023"
   }
 ]
