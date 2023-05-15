@@ -10,7 +10,7 @@ export default function Library() {
         where I read them. This list is personal and reflects{" "}
         <span className="italic">my own associations</span>.
       </h3>
-      <div className="pt-10">
+      <div className="pt-24">
         <div className="flex flex-col sm:gap-4 md:gap-8">
           {impressions.map((impression, index) => (
             <>

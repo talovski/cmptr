@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Image from "next/image";
+
 type Impression = {
   id: string;
   title: string;
@@ -79,15 +80,16 @@ export default function BookImpression({
           </>
         )}
       </div>
-      <div className="hidden w-full items-start md:flex md:gap-12">
+      <div className="hidden w-full items-start justify-between md:flex md:gap-6">
         <div className="relative w-[46%]">
           <Image
-            width={400}
+            width={700}
             height={100}
             src={impression.photo}
             alt="Photo"
-            className="max-h-[590px] min-w-[300px] rounded-md object-contain lg:min-w-[380px]"
+            className=" min-w-[300px] rounded-md object-contain lg:min-w-[380px]"
           />
+          {/*max-h-[590px]*/}
           <div
             style={{ top: `${posY}` }}
             className={`absolute -left-7 flex h-14 w-14 items-center justify-center rounded-full border-2 border-solid border-[#212130] bg-[#E3CEB8] text-lg`}
@@ -96,9 +98,9 @@ export default function BookImpression({
           </div>
         </div>
         {/*max-w-[400px]*/}
-        <div className="md:w-[46%]">
+        <div className="w-[46%]">
           <Image
-            width={200}
+            width={150}
             height={100}
             src={impression.cover}
             alt={impression.title}

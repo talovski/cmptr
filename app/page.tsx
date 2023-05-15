@@ -30,7 +30,7 @@ export default function Home() {
             <span className="italic">contract work in May 2023</span>.{" "}
           </div>
         </div>
-        <div className="flex flex-wrap justify-between text-xm sm:text-md lg:text-lg">
+        <div className="flex flex-wrap justify-between gap-6 text-xm sm:text-md lg:text-lg">
           <div className="min-w-[222px] pt-12 sm:w-full md:w-[46%]">
             <p className=" italic">About me</p>
 
