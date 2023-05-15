@@ -81,7 +81,7 @@ export default function BookImpression({
         )}
       </div>
       <div className="hidden w-full items-start md:flex md:gap-12">
-        <div className="relative">
+        <div className="relative w-[46%]">
           <Image
             width={400}
             height={100}
@@ -96,7 +96,8 @@ export default function BookImpression({
             🔮
           </div>
         </div>
-        <div className="max-w-[400px]">
+        {/*max-w-[400px]*/}
+        <div className="md:w-[46%]">
           <Image
             width={200}
             height={100}

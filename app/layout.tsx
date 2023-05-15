@@ -5,12 +5,12 @@ import Image from "next/image";
 import "./globals.css";
 import stars from "../public/stars/stars.svg";
 
-const ptSerif = PT_Serif({
-  weight: ["400", "700"],
+const sourceSerif = Source_Serif_4({
   subsets: ["latin", "cyrillic"],
   style: ["italic", "normal"],
+  axes: ["opsz"],
 });
-// axes: ["opsz"],
+// weight: ["400", "700"],
 
 export const metadata = {
   title: "Nika Talovski",
@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={clsx(
-          ptSerif.className,
+          sourceSerif.className,
           "relative bg-[#212131] py-[10px] sm:px-0 md:px-[20px]"
         )}
       >
