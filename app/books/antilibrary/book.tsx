@@ -34,14 +34,15 @@ export default function Book({ book }: { book: Book }) {
                 height={25}
               />
             </Tooltip.Trigger>
-            <Tooltip.Content className="rounded-lg bg-gray-900 p-2 text-md text-white shadow-sm duration-300 ">
+            <Tooltip.Content className="rounded-lg bg-gray-900 p-2 font-sans text-sm text-white shadow-sm duration-300">
+              <Tooltip.Arrow />
               {book.notes}
             </Tooltip.Content>
           </Tooltip.Root>
         </Tooltip.Provider>
       </div>
-      <p className="pt-4 text-lg sm:text-md">{book.title}</p>
-      <p className="pt-2 text-lg italic sm:text-md">{book.authors}</p>
+      <p className="pt-4 text-xm sm:text-xm">{book.title}</p>
+      <p className="pt-2 text-xm italic sm:text-xm">{book.authors}</p>
     </div>
   );
 }

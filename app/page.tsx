@@ -19,9 +19,9 @@ export default function Home() {
         "bg-[#F5EDDF]": hover === "books",
       })}
     >
-      <div className="relative m-auto h-full w-5/6 max-w-[1050px] pt-24">
+      <div className="relative m-auto h-full w-11/12 max-w-[1050px] pt-24 sm:w-5/6">
         <div className="pb-12">
-          <div className="inline text-lg lg:text-xl">
+          <div className="inline text-lg md:text-xl">
             <h1 className="inline">
               <span className="font-bold text-[#CF6C54]">Nika Talovski</span>,
               Full Stack Developer with strong affinity towards UX design.
@@ -30,36 +30,36 @@ export default function Home() {
             <span className="italic">contract work in May 2023</span>.{" "}
           </div>
         </div>
-        <div className="flex flex-wrap justify-between text-md lg:text-lg">
+        <div className="flex flex-wrap justify-between text-xm sm:text-md lg:text-lg">
           <div className="min-w-[222px] pt-12 sm:w-full md:w-[46%]">
             <p className=" italic">About me</p>
 
             <div className="flex flex-col gap-6 pt-5">
-              <p className="">
+              <p>
                 Most recently, I was a Frontend Engineer at Ace. I was focused
                 on business logic and UI development in a small team of 3
                 engineers.
               </p>
-              <p className="">
+              <p>
                 Before that, I spent some time doing freelance jobs, mainly
                 working with small businesses and design studios in Russia and
                 Europe. I also worked in academia, focuing on application of
                 statistics to social sciences.
               </p>
-              <p className="">
+              <p>
                 In 2023 I made Aliyah to Israel and now live in Tel Aviv. I also
                 love pottery and role-playing games.
               </p>
             </div>
           </div>
-          <div className="min-w-[222px] pt-12 sm:w-full md:w-[46%]">
+          <div className="min-w-[222px] pt-16 sm:w-full md:w-[46%] md:pt-12">
             <div>
-              <p className=" italic">Selected work</p>
+              <p className="italic">Selected work</p>
               <div className="flex flex-col gap-4 pt-1">
                 <div
                   onMouseEnter={() => setHover("ace")}
                   onMouseLeave={() => setHover("none")}
-                  className="relative -left-6 max-w-[700px] cursor-alias px-6 py-4 hover:shadow-1px hover:shadow-[#F9DE78]"
+                  className="relative -left-2 max-w-[700px] cursor-alias px-2 py-4 hover:shadow-1px hover:shadow-[#F9DE78] sm:-left-6 sm:px-6"
                 >
                   <p className="">
                     <span className="font-bold italic underline decoration-[#C2715A] underline-offset-4">
@@ -72,7 +72,7 @@ export default function Home() {
                 <div
                   onMouseEnter={() => setHover("haven")}
                   onMouseLeave={() => setHover("none")}
-                  className="relative -left-6 -top-6 max-w-[700px] cursor-alias px-6 py-4 hover:shadow-1px hover:shadow-[#713DA9]"
+                  className="relative -left-2 -top-6 max-w-[700px] cursor-alias px-2 py-4 hover:shadow-1px hover:shadow-[#713DA9] sm:-left-6 sm:px-6"
                 >
                   <p className="">
                     <span className="font-bold italic underline decoration-[#C2715A] underline-offset-4">
@@ -86,7 +86,7 @@ export default function Home() {
                   <div
                     onMouseEnter={() => setHover("books")}
                     onMouseLeave={() => setHover("none")}
-                    className="relative -left-6 -top-12 max-w-[700px] cursor-alias px-6 py-4 hover:shadow-1px hover:shadow-[#713DA9]"
+                    className="relative -left-2 -top-12 max-w-[700px] cursor-alias px-2 py-4 hover:shadow-1px hover:shadow-[#713DA9] sm:-left-6 sm:px-6"
                   >
                     <p className="">
                       <span className="font-bold italic underline decoration-[#C2715A] underline-offset-4">

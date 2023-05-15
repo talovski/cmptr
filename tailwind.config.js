@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "576px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -16,10 +19,14 @@ module.exports = {
         "1px": "0 0 0 1px",
       },
       letterSpacing: {
-        sm: "-.016em",
-        md: "-.025em",
-        lg: "-.03em",
-        xl: "-.0435em",
+        sm: "-.04em",
+        md: "-.04em",
+        lg: "-.04em",
+        xl: "-.04em",
+        // sm: "-.016em",
+        // md: "-.025em",
+        // lg: "-.03em",
+        // xl: "-.0435em",
       },
       textIndent: {
         md: "-.018em",
@@ -37,20 +44,23 @@ module.exports = {
           "19px",
           {
             lineHeight: 1.2,
-            letterSpacing: "-.016em",
+            // letterSpacing: "-.016em",
+            letterSpacing: "-.04em",
           },
         ],
         xm: [
           "21px",
           {
             lineHeight: 1.2,
-            letterSpacing: "-.016em",
+            // letterSpacing: "-.016em",
+            letterSpacing: "-.04em",
           },
         ],
         md: [
           "28px",
           {
-            letterSpacing: "-.025em",
+            // letterSpacing: "-.025em",
+            letterSpacing: "-.04em",
             textIndent: "-.018em",
             lineHeight: 1.2,
           },
@@ -58,7 +68,8 @@ module.exports = {
         lg: [
           "32px",
           {
-            letterSpacing: "-.03em",
+            // letterSpacing: "-.03em",
+            letterSpacing: "-.04em",
             textIndent: "-.019em",
             lineHeight: 1.2,
           },

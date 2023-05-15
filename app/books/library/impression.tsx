@@ -16,22 +16,32 @@ type Impression = {
 
 export default function BookImpression({
   impression,
+  index,
 }: {
   impression: Impression;
+  index: number;
 }) {
+  const posY = Math.floor(Math.random() * 100) + 1 + "%";
+
   return (
     <>
-      <div className="relative block md:hidden lg:hidden">
+      <div className="relative block md:hidden">
         <div className="relative z-20 flex gap-2">
-          {/*  h-[315px]  */}
-          <div className="">
+          <div className="relative">
             <Image
               width={270}
               height={300}
               src={impression.photo}
               alt="Photo"
-              className=" rounded-md object-contain"
+              className="rounded-md object-contain"
             />
+
+            <div
+              style={{ top: `${posY}` }}
+              className={`absolute -left-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#8A998F] text-xm`}
+            >
+              💬
+            </div>
           </div>
           <div className="relative">
             <Image
@@ -70,14 +80,22 @@ export default function BookImpression({
           </>
         )}
       </div>
-      <div className="w-full items-start sm:hidden md:flex md:gap-12 lg:flex">
-        <Image
-          width={400}
-          height={100}
-          src={impression.photo}
-          alt="Photo"
-          className="max-h-[590px] min-w-[300px] rounded-md object-contain lg:min-w-[380px]"
-        />
+      <div className="hidden w-full items-start md:flex md:gap-12">
+        <div className="relative">
+          <Image
+            width={400}
+            height={100}
+            src={impression.photo}
+            alt="Photo"
+            className="max-h-[590px] min-w-[300px] rounded-md object-contain lg:min-w-[380px]"
+          />
+          <div
+            style={{ top: `${posY}` }}
+            className={`absolute -left-7 flex h-14 w-14 items-center justify-center rounded-full border-2 border-solid border-[#212130] bg-[#E3CEB8] text-lg`}
+          >
+            🔮
+          </div>
+        </div>
         <div className="max-w-[400px]">
           <Image
             width={200}
