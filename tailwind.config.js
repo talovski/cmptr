@@ -37,7 +37,7 @@ module.exports = {
         xs: [
           "15px",
           {
-            lineHeight: 1,
+            lineHeight: 1.1,
           },
         ],
         sm: [
@@ -46,6 +46,7 @@ module.exports = {
             lineHeight: 1.2,
             // letterSpacing: "-.016em",
             letterSpacing: "-.04em",
+            letterSpacing: "-.025em",
           },
         ],
         xm: [
@@ -54,6 +55,7 @@ module.exports = {
             lineHeight: 1.2,
             // letterSpacing: "-.016em",
             letterSpacing: "-.04em",
+            letterSpacing: "-.025em",
           },
         ],
         md: [
